@@ -1,3 +1,5 @@
+// Simulado para a prova p1.
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -12,8 +14,6 @@ int pilha[31];
 int entrada;
 int i=0, c, qtd=0;
 
-
- //numero de casos de teste
 
 //main
 int main(){

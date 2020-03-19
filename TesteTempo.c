@@ -6,4 +6,4 @@ void tempo(){
     end_time = clock();
     printf( "Execution time was %lu seconds\n",
           (end_time - start_time) / CLOCKS_PER_SEC );
-  }
+}

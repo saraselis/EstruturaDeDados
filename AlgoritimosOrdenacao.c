@@ -1,9 +1,11 @@
+// Criar um algor√≠timo que gere n√∫meros aleat√≥rios e ordene utilizando diferentes tipos de algor√≠timos.
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 #include <locale.h>
 
-//funÁıes
+
 void bubble(int n, int *vet);
 void qs(int *vet, int inicio, int fim);
 int particiona(int *vet, int inicio, int fim);
@@ -15,29 +17,26 @@ void menu(int n, int *vet);
 
 
 int main(){
-	
 	setlocale(LC_ALL, "Portuguese");
 	
 	int n, i, *vet;
 	
-	printf("Digite a quantidade de n˙meros:\n");
+	printf("Digite a quantidade de n√∫meros:\n");
 	scanf("%d", &n);
 	printf("\n");
 	vet=(int*)malloc(n* sizeof(int));
 
-	//srand(n);
 	for (i = 0; i <n ; i++){
 		vet[i]=rand();
     }
     
-    printf("SequÍncia de n˙meros aleatÛrios:\n");
+    printf("Sequ√™ncia de n√∫meros aleat√≥rios:\n");
     
 	if(n<1){
 		
 		for(i=0;i<n;i++){
  		int x, aux;
  		x=rand()%n;
- 		//printf("%d ", x);
  		aux=vet[i];
  		vet[i]=vet[x];
  		vet[x]=aux;
@@ -55,7 +54,6 @@ int main(){
 	}
 	
 	printf("\n");
-	
  	
  	menu(n,vet);
  		
@@ -74,18 +72,8 @@ void bubble(int n, int *vet){
 				vet[k]=aux;
 			}
 		}
-	} 
-	/*end_time = clock();
-	
-	for (i = 0; i<n ; i++){
-		printf("%d ",vet[i]);
-   	}
-   	
-   	printf("\n");
-	printf( "O tempo de execucao foi %f \n", (end_time - start_time) / (double)CLOCKS_PER_SEC);
-	system("pause");
-	system("cls");*/
-  }
+	}
+}
 
 void qs(int *vet, int inicio, int fim){
 	int pivo, i, n;
@@ -95,7 +83,6 @@ void qs(int *vet, int inicio, int fim){
         qs(vet, inicio, pivo-1);
         qs(vet, pivo+1, fim);//fim 
     }
-
 }
 
 int particiona(int *vet, int inicio, int fim){
@@ -106,13 +93,11 @@ int particiona(int *vet, int inicio, int fim){
     pivo=vet[inicio];
 
     while(esquerda<direita){
-        //veloresXindices
-
-        //anda a esquerda
+        
         while(vet[esquerda]<=pivo && esquerda<=fim){
             esquerda++;
         }
-        //anda a direita
+        
         while(vet[direita]>pivo){
             direita--;
         }
@@ -128,9 +113,7 @@ int particiona(int *vet, int inicio, int fim){
     vet[direita]=pivo;
 
     return direita;
-	
 }
-//aaaaaaaaaaa
 
 void merge(int vet[],int i1,int j1,int i2,int j2){
     int temp[100000];    
@@ -179,11 +162,9 @@ void selection(int vet[], int n){
 				pivo=j;
 			}
 		}
-		
 		aux=vet[i];
 		vet[i]=vet[pivo];
 		vet[pivo]=aux;	
-
 	}
 	
 	for (i = 0; i<n ; i++){
@@ -198,8 +179,7 @@ void insert(int vet[], int n){
        aux = vet[i];
        j = i-1;
 
-       while (j >= 0 && vet[j] > aux)
-       {
+       while (j >= 0 && vet[j] > aux){
            vet[j+1] = vet[j];
            j = j-1;
        }
@@ -214,7 +194,6 @@ void insert(int vet[], int n){
 void menu(int n, int *vet){
 	int opc, i;
 	clock_t start_time, end_time;
-	
 	
 	do{
 		printf("\n");
@@ -259,14 +238,14 @@ void menu(int n, int *vet){
 				break;
 				
 			default:
-				printf("Opcao inv·lida!\n");
+				printf("Opcao invalida!\n");
 				break;
 		}
 		for (i = 0; i<n ; i++){
 			printf("%d ",vet[i]);
    		}
    		printf("\n");
-		printf( "\nO tempo de execuÁ„o foi: %f segundos. \n\n", (end_time - start_time) / (double)CLOCKS_PER_SEC);
+		printf( "\nO tempo de execu√ß√£o foi: %f segundos. \n\n", (end_time - start_time) / (double)CLOCKS_PER_SEC);
 		system("pause");
 		system("cls");
 	}while(opc!=4);

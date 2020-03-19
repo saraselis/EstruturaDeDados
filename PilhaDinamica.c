@@ -1,6 +1,7 @@
+// Criar um algorítimo de pilha dinâmico
+
 #include<stdlib.h>
 #include<stdio.h>
-
 
 
 typedef struct {

@@ -1,13 +1,15 @@
+// Simulado para a prova p1.
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 
 //variaveis globais
 int lista[30], qtd;
-//declarar funcoes
+
 void ordenar(int qtd);
 void mostrar(int qtd);
-//main
+
 int main(){
 	
 	int i;
@@ -23,8 +25,6 @@ int main(){
 	return 0;
 }
 
-//funcoes
-
 void ordenar(int qtd){
 	int c, j, aux;
 	
@@ -37,15 +37,15 @@ void ordenar(int qtd){
 				aux=lista[c];
 				lista[c]=lista[j];
 				lista[j]=aux;	
-		}
+			}
 		}
 	}	
 }
 
 void mostrar(int qtd){
-		int c;
-		for(c=0;c<qtd;c++){
-			printf("%d",lista[c]);
-}
+	int c;
+	for(c=0;c<qtd;c++){
+		printf("%d",lista[c]);
+	}
 
 }

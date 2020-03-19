@@ -1,7 +1,8 @@
+// Criar uma pilha estÃ¡tica
+
 #include<stdlib.h>
 #include<stdio.h>
 
-//declarar função
 void push(int x);
 void pop();
 void stackpop();
@@ -45,7 +46,7 @@ void stackpop(){
 	if(topo!=0){
 		printf("\n%d\n", ceg[topo-1]);
 	}else{
-		printf("A cegonha está vazia!\n");	
+		printf("A cegonha estï¿½ vazia!\n");	
 	}
 
 }

@@ -1,12 +1,14 @@
+// Criar um algor√≠timo que simule uma cegonha de carros.
+
 #include<stdlib.h>
 #include<stdio.h>
-
 
 
 typedef struct {
 	int tam;
 	int *n;
 }pilha;
+
 
 void menu(pilha *p);
 pilha *alocar();
@@ -27,7 +29,7 @@ pilha *alocar(){
 	aux = (pilha*)malloc(sizeof(pilha));
 	
 	if(aux==NULL){
-		printf("erro de memÛria");
+		printf("erro de memÔøΩria");
 		exit (1);
 	}
 	aux->tam=0;
@@ -43,7 +45,7 @@ void push(pilha *p, int x){
 		p->n=(int *)realloc(p->n, sizeof(int)*(p->tam+1));
 	}
 	if(p->n==NULL){
-		printf("Erro de memÛria");
+		printf("Erro de memÔøΩria");
 		exit(1);
 	}
 	p->n[p->tam]=x;
@@ -55,15 +57,14 @@ void push(pilha *p, int x){
 void pop(pilha*p){
 	if(p->tam==0){
 		printf("Cegonha vazia!\n");
-}else{
-	
-	p->tam--;
-	printf("\n%d Removido com sucesso!\n");
-}
+	}else{
+		
+		p->tam--;
+		printf("\n%d Removido com sucesso!\n");
+	}
 }
 
 int stackpop(pilha *p){
-	
 	return p->n[p->tam-1]; 	
 }
 

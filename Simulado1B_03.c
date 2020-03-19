@@ -15,17 +15,13 @@ int main(){
 	for(c=0; c<30; c++){
 		scanf("%s", &lista[c],50);
 		qtd++;	
-		}
+	}
 		
 		ordenar();
 		mostrar();
 		
 	return 0;
-	}
-	
-	
-	
-
+}
 
 void ordenar(){
 	char aux;
@@ -37,8 +33,8 @@ void ordenar(){
 				strcpy(aux, lista[i]);
 				strcpy(lista[i], lista[j]);
 				strcpy(lista[j], aux);
-		}	
-	
+			}	
+		}
 	}
 }
 

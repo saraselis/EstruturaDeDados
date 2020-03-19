@@ -1,8 +1,10 @@
+// Criar lista ligada
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 
-	//structs
+
 typedef struct lista{
 	int qtd;	
 	struct elemento *inicio;
@@ -14,7 +16,7 @@ typedef struct elemento{
 	struct elemento *prox;
 }elemento;
 
-	//declarar função
+
 lista *alocarlista();
 void menu(lista *l);
 void inserir(lista *l, int mat, char nome[20]);
@@ -23,10 +25,8 @@ void mostrar(lista *l);
 int excluir(lista*l, char nome[20]);
 int buscar(lista*l, char nome[20]);
 
-	//função principal
+
 int main(){
-	
-	
 	lista *l;
 	l=alocarlista();
 	
@@ -35,8 +35,6 @@ int main(){
 	
 	return 0;
 }
-
-	//funções
 
 lista *alocarlista(){
 	
@@ -47,8 +45,6 @@ lista *alocarlista(){
 	
 	return aux;
 }
-	
-
 
 void inserir(lista *l, int mat, char nome[20]){
 	elemento *novo;
