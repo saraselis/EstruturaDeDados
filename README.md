@@ -1,4 +1,4 @@
-# 🤖 EstruturaDeDados
+# EstruturaDeDados
 ## Repositório da matéria de Estrutura de Dados.
 
 Os algorítimos foram desenvolvidos na __linguagem C__ e incluem:
